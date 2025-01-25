@@ -1,4 +1,4 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 require("dotenv").config();
 
@@ -9,6 +9,6 @@ if (!dbUrl || !dbKey) {
   throw new Error("Missing Supabase URL or Key in environment variables");
 }
 
-const client = createClient(dbUrl, dbKey);
+const client: SupabaseClient = createClient(dbUrl, dbKey);
 
 export default client;
