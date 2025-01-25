@@ -6,7 +6,7 @@ const config = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   moduleFileExtensions: ["js", "ts", "json"],
-  testMatch: ["**/__tests__/**/*.test.ts", "**/modules/**/tests/**/*.test.ts"],
+  testMatch: ["**/__tests__/**/*.test.ts", "<rootDir>/src/**/*.test.ts"],
 };
 
 module.exports = config;
