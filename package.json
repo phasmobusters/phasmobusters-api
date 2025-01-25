@@ -13,10 +13,10 @@
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "author": "George Kassavetis",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/phasmobusters/phasmobusters-api.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -25,6 +25,7 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "helmet": "^8.0.0",
+    "joi": "^17.13.3",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
