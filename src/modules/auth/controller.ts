@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import client from "../../db/client";
+import getClient from "../../db/client";
 import { loginSchema, signUpSchema } from "./schemas";
 
 export const signUp = async (req: Request, res: Response) => {
@@ -12,7 +12,7 @@ export const signUp = async (req: Request, res: Response) => {
   }
 
   try {
-    const { data, error } = await client.auth.signUp({
+    const { data, error } = await getClient().auth.signUp({
       email,
       password,
     });
@@ -37,7 +37,7 @@ export const login = async (req: Request, res: Response) => {
   }
 
   try {
-    const { data, error } = await client.auth.signInWithPassword({
+    const { data, error } = await getClient().auth.signInWithPassword({
       email,
       password,
     });
