@@ -1,7 +1,7 @@
 {
-  "name": "express-api-starter-ts",
+  "name": "phasmobusters-api",
   "version": "1.2.0",
-  "description": " A basic starter for an express.js API with Typescript",
+  "description": "API for Phasmobusters mobile app",
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
@@ -13,17 +13,19 @@
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
-  "author": "CJ R. <cj@null.computer> (https://w3cj.now.sh)",
+  "author": "George Kassavetis",
   "repository": {
     "type": "git",
-    "url": "https://github.com/w3cj/express-api-starter.git"
+    "url": "https://github.com/phasmobusters/phasmobusters-api.git"
   },
   "license": "MIT",
   "dependencies": {
+    "@supabase/supabase-js": "^2.47.14",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "helmet": "^8.0.0",
+    "joi": "^17.13.3",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
