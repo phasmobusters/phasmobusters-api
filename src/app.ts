@@ -2,11 +2,13 @@ import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
 import cors from "cors";
+import favicon from "serve-favicon";
 
 import api from "./api";
 import MessageResponse from "./interfaces/MessageResponse";
 import { errorHandler } from "./middlewares/errorHandler";
 import { notFound } from "./middlewares/notFound";
+import path from "path";
 
 require("dotenv").config();
 
@@ -24,6 +26,8 @@ app.get<{}, MessageResponse>("/", (_req, res) => {
 });
 
 app.use("/api/v1", api);
+
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 app.use(notFound);
 app.use(errorHandler);
